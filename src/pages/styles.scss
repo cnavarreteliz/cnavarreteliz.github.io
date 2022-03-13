@@ -8,6 +8,7 @@ body {
   font-size: 1.25rem;
   font-family: "League Spartan", sans-serif;
   line-height: 1.65rem;
+  margin: 0;
 }
 
 a {
@@ -27,12 +28,14 @@ p {
 
 .columns {
   display: flex;
+  flex-wrap: wrap;
   .column {
     flex: 1;
     min-width: 300px;
     padding: 1rem;
     &.side {
-      flex: 0;
+      flex: 1;
+      max-width: 300px;
     }
   }
 }
@@ -47,5 +50,15 @@ p {
   margin: auto;
   .photo {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .columns {
+    .column {
+      &.side {
+        max-width: 600px;
+      }
+    }
   }
 }

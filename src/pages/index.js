@@ -19,7 +19,7 @@ function IndexPage() {
             className="photo"
             src="/static/carlos-navarrete_400x400.jpeg" alt="" />
           <div><span>
-            Are you interested in contacting me? Send an email to <a href="mailto:cnavarreteliz@gmail.com">cnavarreteliz@gmail.com</a>
+            Are you interested in contacting me? Send an email to <a href="mailto:hello@carlosnavarrete.dev">hello@carlosnavarrete.dev</a>
           </span></div>
 
           <SocialMedia
