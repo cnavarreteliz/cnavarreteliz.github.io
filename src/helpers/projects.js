@@ -1,0 +1,48 @@
+export const projects = [
+  {
+    title: "Constitutin",
+    description: "Digital tool to teach about +20 constitutional topics.",
+    year: 2021,
+    url: "https://constitutin.cl/",
+    article: false,
+    keywords: ["digital participation", "constitution", "gamification"]
+  },
+  {
+    title: "Asuprioriza",
+    description: "Collaboration between ARCA Latam + ABC Digital + Center for Collective Learning, to create a citizen platform to measure agreements and disagreements between inhabitants of Asunción (Capital city of Paraguay).",
+    year: 2021,
+    url: "https://asuprioriza.org/",
+    article: false,
+    keywords: ["digital participation", "council election"]
+  },
+  {
+    title: "Chilecracia",
+    data: "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2F5JX7CT",
+    description: "Pairwise comparison platform for measuring citizen priorities in context of the Chilean Social Outbreak.",
+    year: 2019,
+    url: "https://chilecracia.org/",
+    article: false,
+    keywords: ["digital participation", "pairwise comparison"]
+  }
+];
+
+export const papers = [
+  {
+    journal: "Scientometrics",
+    description: "Patents as indicators of the technological position of countries on a global level?",
+    year: 2022,
+    url: "https://link.springer.com/article/10.1007/s11192-022-04268-y",
+    article: true,
+    authors: "Loreto Mora, Carlos Navarrete",
+    keywords: []
+  },
+  {
+    journal: "Research Policy",
+    description: "The scientific and technological cross-space: Is technological diversification driven by scientific endogenous capacity?",
+    year: 2020,
+    authors: "Pablo Catalan, Carlos Navarrete, Felipe Figueroa",
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S0048733320300950",
+    article: true,
+    keywords: []
+  },
+];

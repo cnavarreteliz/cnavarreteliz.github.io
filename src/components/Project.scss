@@ -1,0 +1,35 @@
+@import "../pages/styles.scss";
+
+.project {
+  margin-bottom: 2rem;
+  .title {
+    color: $secondary;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+
+  .article-title {
+    color: $secondary;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  .title, .article-title, .authors, .description, .journal {
+    margin-bottom: 0.2rem;
+  }
+
+  .journal {
+    font-weight: 600;
+  }
+
+  .keywords {
+    .keyword {
+      color: #888888;
+      font-size: 0.95rem;
+      font-style: italic;
+      margin-right: 0.85rem;
+    }
+  }
+}
