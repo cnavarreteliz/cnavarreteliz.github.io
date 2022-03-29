@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "MonProgramme 2022",
+    description: "MonProgramme2022.org is a digital participation platform that allows users to create their own government programs. This platform allows citizens to select and rank more than 100 proposals taken from the government programs of the main candidates for the 2022 presidential election.",
+    year: 2021,
+    url: "https://monprogramme2022.org/",
+    article: false,
+    keywords: ["digital participation", "presidential elections", "france"]
+  },
+  {
     title: "Constitutin",
     description: "Digital tool to teach about +20 constitutional topics.",
     year: 2021,
