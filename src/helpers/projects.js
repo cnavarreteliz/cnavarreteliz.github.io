@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "MonProgramme 2022",
     description: "MonProgramme2022.org is a digital participation platform that allows users to create their own government programs. This platform allows citizens to select and rank more than 100 proposals taken from the government programs of the main candidates for the 2022 presidential election.",
-    year: 2021,
+    year: 2022,
     url: "https://monprogramme2022.org/",
     article: false,
     keywords: ["digital participation", "presidential elections", "france"]
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     title: "Chilecracia",
-    data: "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2F5JX7CT",
+    // data: "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2F5JX7CT",
     description: "Pairwise comparison platform for measuring citizen priorities in context of the Chilean Social Outbreak.",
     year: 2019,
     url: "https://chilecracia.org/",
