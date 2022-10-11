@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Sacramento&display=swap');
 
-$primary: #0906DC;
+$primary: #051e75;
 $primary-hover: #005EFF;
 $secondary: #223688;
+$white: #FFFFFF;
+$max-width: 1000px;
+
 body {
-  background-color: #FAFAFA;
+  background-color: #EAEAEA;
   font-size: 1.25rem;
   font-family: "League Spartan", sans-serif;
   line-height: 1.65rem;
@@ -13,12 +16,18 @@ body {
 
 a {
   color: $primary;
+
   &:visited {
     color: $primary-hover;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $primary;
 }
 
@@ -29,10 +38,12 @@ p {
 .columns {
   display: flex;
   flex-wrap: wrap;
+
   .column {
     flex: 1;
     min-width: 300px;
     padding: 1rem;
+
     &.side {
       flex: 1;
       max-width: 300px;
@@ -48,6 +59,7 @@ p {
 .main {
   max-width: 900px;
   margin: auto;
+
   .photo {
     width: 100%;
   }

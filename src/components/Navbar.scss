@@ -1,0 +1,23 @@
+@import "../pages/styles.scss";
+
+$height: 70px;
+
+.navbar {
+  height: $height;
+  background-color: $white;
+  color: $primary;
+
+  .container {
+    max-width: $max-width;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $height;
+
+    .brand {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+}

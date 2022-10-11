@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 import Project from "../components/Project";
 import {SocialMedia} from "../components/SocialMedia";
 import {Title} from "../components/Title";
@@ -11,10 +12,9 @@ import "./styles.scss";
 function IndexPage() {
   return (
     <>
-      <title>Home Page</title>
+      <Navbar />
       <main className="main columns">
         <div className="column side">
-          <h1 className="logo">Carlos Navarrete</h1>
           <img
             className="photo"
             src="/static/carlos-navarrete_400x400.jpeg" alt="" />
