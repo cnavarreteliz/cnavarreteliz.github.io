@@ -53,4 +53,13 @@ export const papers = [
     article: true,
     keywords: []
   },
+  {
+    journal: "arxiv",
+    description: "Understanding Political Agreements and Disagreements: Evidence from the 2022 French Presidential Election",
+    year: 2022,
+    authors: "Carlos Navarrete, Nicole Ferrada, Mariana Macedo, Rachael Colley, Jingling Zhang, Umberto Grandi, Jerome Lang, César A Hidalgo",
+    url: "https://arxiv.org/ftp/arxiv/papers/2211/2211.04577.pdf",
+    article: true,
+    keywords: []
+  }
 ];
