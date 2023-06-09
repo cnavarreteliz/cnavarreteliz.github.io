@@ -36,6 +36,15 @@ export const projects = [
 
 export const papers = [
   {
+    journal: "Manuscript Under Review",
+    description: "Election Polarization: Mapping citizen divisions through elections",
+    year: "Forthcoming",
+    // url: "",
+    article: false,
+    authors: "Carlos Navarrete, Mariana Macedo, Viktor Stojkoski, Marcela Parada",
+    keywords: ["computational political science", "elections", "polarization"]
+  },
+  {
     journal: "Scientometrics",
     description: "Patents as indicators of the technological position of countries on a global level?",
     year: 2022,
@@ -54,9 +63,9 @@ export const papers = [
     keywords: []
   },
   {
-    journal: "arxiv",
+    journal: "Manuscript Under Review",
     description: "Understanding Political Agreements and Disagreements: Evidence from the 2022 French Presidential Election",
-    year: 2022,
+    year: "Forthcoming",
     authors: "Carlos Navarrete, Nicole Ferrada, Mariana Macedo, Rachael Colley, Jingling Zhang, Umberto Grandi, Jerome Lang, César A Hidalgo",
     url: "https://arxiv.org/ftp/arxiv/papers/2211/2211.04577.pdf",
     article: true,

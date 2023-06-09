@@ -4,7 +4,7 @@ import "./Navbar.scss";
 
 export default function Navbar(props) {
   return <>
-    <title></title>
+    <title>Carlos Navarrete</title>
     <nav className="navbar">
       <div className="container">
         <span className="brand">Carlos Navarrete</span>

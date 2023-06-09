@@ -10,14 +10,22 @@
     margin: 0;
   }
 
-  .article-title {
-    color: $secondary;
+  .article-title, .article-title a, .article-title a:visited {
+    color: $primary;
     font-weight: 600;
     font-size: 1.3rem;
   }
 
   .title, .article-title, .authors, .description, .journal {
     margin-bottom: 0.2rem;
+  }
+
+  .authors {
+    font-style: italic;
+  }
+
+  .authors, .journal {
+    font-size: 1rem;
   }
 
   .journal {

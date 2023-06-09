@@ -17,7 +17,7 @@ function IndexPage() {
         <div className="column side">
           <img
             className="photo"
-            src="/static/carlos-navarrete_400x400.jpeg" alt="" />
+            src="/static/carlos-navarrete-lizama-photo.jpg" alt="" />
           <div>
             <p>Let&apos;s have a first call!</p>
             <p>
@@ -34,8 +34,9 @@ function IndexPage() {
 
         </div>
         <div className="column">
+          <Title label="About me" />
           <p>
-            <strong>Hola!</strong> My name is Carlos Navarrete. I am an enthusiastic and outgoing Chilean Industrial Engineer doing my Ph.D. studies in Computer Science at the{" "}
+            <strong>Hola!</strong> My name is Carlos Navarrete. I am Ph.D. candidate in Computer Science at the{" "}
             <a href="https://univ-toulouse.fr">Université de Toulouse</a> (France, 🇫🇷). I am affiliated to the{" "}
             <a href="https://irit.fr">Institut de Recherche en Informatique de Toulouse</a> (IRIT). I conduct research at the intersection of computer and political science, aiming to understand the dynamics of agreements, disagreements, and polarization in society through computational techniques.
           </p>
@@ -43,7 +44,7 @@ function IndexPage() {
           <p>Prior Toulouse, I worked three years as a software developer and during my bachelor, I conducted research on Economic Geography.</p>
 
           <p>
-          I hope to contribute with my grain of sand so that my parents, relatives, and the population can have access to more fair governance through the benefits that come from computational advancements.
+          I hope to contribute with my grain of sand so that my parents, relatives, and the population can have access to more fair governance through the benefits derived from digital technologies.
           </p>
 
           <Title label="Recent work" />
@@ -51,6 +52,12 @@ function IndexPage() {
           {papers.map(d => <Project
             {...d}
           />)}
+
+          {/* <Title label="Digital platforms" />
+
+          {projects.map(d => <Project
+            {...d}
+          />)} */}
         </div>
       </main>
     </>
