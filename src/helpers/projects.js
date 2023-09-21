@@ -41,7 +41,7 @@ export const papers = [
     year: "Forthcoming",
     // url: "",
     article: false,
-    authors: "Carlos Navarrete, Mariana Macedo, Viktor Stojkoski, Marcela Parada",
+    authors: "Carlos Navarrete, Mariana Macedo, Viktor Stojkoski, Marcela Parada-Contzen",
     keywords: ["computational political science", "elections", "polarization"]
   },
   {
