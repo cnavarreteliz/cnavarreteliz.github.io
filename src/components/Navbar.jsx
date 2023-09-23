@@ -7,13 +7,12 @@ export default function Navbar(props) {
     <title>Carlos Navarrete</title>
     <nav className="navbar">
       <div className="container">
-        <span className="brand">Carlos Navarrete</span>
-        {/* <ul className="menu">
-          <li>About</li>
-          <li>Research</li>
-          <li>Digital tools</li>
-          <li>Blog</li>
-        </ul> */}
+        <a href="/">
+          <span className="brand">Carlos Navarrete</span>
+        </a>
+        <ul className="menu">
+          <a href="/courses"><li><li>Courses</li></li></a>
+        </ul>
       </div>
     </nav>
   </>;

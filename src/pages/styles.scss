@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=League+Spartan:wght@400;500;600;700&family=Sacramento&display=swap');
 
 $primary: #002ece;
 $primary-hover: #005EFF;
 $secondary: #0e1946;
+$tertiary: #108c65;
 $white: #FFFFFF;
 $max-width: 900px;
 
@@ -44,7 +45,7 @@ a {
 
 .columns {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 
   .column {
     flex: 1;
