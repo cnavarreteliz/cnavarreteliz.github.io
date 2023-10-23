@@ -3,7 +3,7 @@
 $primary: #002ece;
 $primary-hover: #005EFF;
 $secondary: #0e1946;
-$tertiary: #108c65;
+$tertiary: #E0C800;
 $white: #FFFFFF;
 $max-width: 900px;
 
@@ -37,9 +37,9 @@ p {
 }
 
 a {
-  color: #108c65;
+  color: $primary;
   &:visited {
-    color: #108c65;
+    color: $primary;
   }
 }
 
