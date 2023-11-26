@@ -17,10 +17,6 @@ body {
 
 a {
   color: $primary;
-
-  &:visited {
-    color: $primary-hover;
-  }
 }
 
 h1,
@@ -38,9 +34,6 @@ p {
 
 a {
   color: $primary;
-  &:visited {
-    color: $primary;
-  }
 }
 
 .columns {

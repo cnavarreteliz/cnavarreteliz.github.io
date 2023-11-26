@@ -1,5 +1,5 @@
 @import "../pages/styles.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 $height: 70px;
 
 .navbar {
@@ -22,12 +22,13 @@ $height: 70px;
     height: $height;
 
     .brand {
-      font-size: 2.25rem;
-      font-weight: 700;
-      font-family: "Ms Madi";
+      align-items: center;
       color: $secondary;
+      display: flex;
+      font-size: 2rem;
+      font-weight: 700;
+      justify-content: center;
       text-decoration: none;
-      
     }
 
     .menu {

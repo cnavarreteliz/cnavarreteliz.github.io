@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Project from "../components/Project";
-import { SocialMedia } from "../components/SocialMedia";
-import { Title } from "../components/Title";
+import {SocialMedia} from "../components/SocialMedia";
+import {Title} from "../components/Title";
 
-import { papers, projects } from "../helpers/projects";
+import {papers, projects} from "../helpers/projects";
 
 import "./styles.scss";
 
@@ -26,42 +26,47 @@ function IndexPage() {
 
           <SocialMedia
             data={[
-              { url: "https://scholar.google.fr/citations?user=JqTxoC0AAAAJ&hl=en", name: "Google Scholar" },
-              { url: "https://github.com/cnavarreteliz", name: "Github" },
-              { url: "https://twitter.com/cnavarreteliz", name: "Twitter" }
+              {url: "https://scholar.google.fr/citations?user=JqTxoC0AAAAJ&hl=en", name: "Google Scholar"},
+              {url: "https://github.com/cnavarreteliz", name: "Github"},
+              {url: "https://twitter.com/cnavarreteliz", name: "Twitter"}
             ]}
           />
 
         </div>
         <div className="column">
-          <Title label="About me" />
+          <Title label="About me" permalink="about" />
           <p>
-            <strong>Hola!</strong> My name is Carlos Navarrete. I am a Ph.D. candidate in Computer Science at the{" "}
-            <a href="https://univ-toulouse.fr">Université de Toulouse</a>. Today, I am affiliated with the{" "}
-            <a href="https://fi.udec.cl/">School of Engineering</a> at the Universidad of Concepción. I conduct research at the intersection of computer and social science, aiming to unravel the dynamics of agreement, citizen division, and polarization in society.
+            <strong>Hola!</strong> <b>My name is Carlos Navarrete, Ph.D.</b> I am affiliated with the{" "}
+            <a href="https://fi.udec.cl/">School of Engineering</a> at the Universidad of Concepción. 
           </p>
 
-          <p>My Ph.D. research was carried out at the <a href="https://irit.fr">Institut de Recherche en Informatique de Toulouse</a> (IRIT) at the Université de Toulouse, at the <a href="https://www.uu.nl/en/research/human-geography-and-planning">Department of Human Geography and Spatial Planning</a> at Utrecht University, and at the <a href="https://uds.udec.cl">Unidad de Data Science</a> at the Universidad de Concepción.</p>
-
-          <p>
-            I have participated as a web developer and researcher in several digital projects around the world, such as <a href="https://chilecracia.org">Chilecracia</a>, <a href="https://datachile.io">DataChile</a>, and <a href="https://monprogramme2022.org">Mon Programme 2022</a>, to name a few.
+          <p>Prior joining to Concepción, I was a Visiting Student at the Department of Human Geography and Spatial Planning at Utrecht University, and at the Unidad de Data Science at the Universidad de Concepción.
+          I completed my doctoral degree at the Université de Toulouse and my undergraduate studies at the Universidad de Concepción.
           </p>
 
           <p>
-            Today, my research interests encompass the use and potential applications of Large Language Models (LLMs) and the study of Election Polarization and Competitiveness.
+          My main research sets at the intersection of computer and social science, aiming to unravel the dynamics of agreement, citizen division, and polarization in society.
           </p>
 
-          {/* <Title label="Recent work" /> */}
+          <p>Part of my work has appeared in journals like <a href="https://www.nature.com/articles/s41562-023-01755-x" target="_blank" rel="noreferrer">Nature Human Behaviour</a> and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0048733320300950?via%3Dihub" target="_blank" rel="noreferrer">Research Policy</a>, <a href="https://scholar.google.fr/citations?user=JqTxoC0AAAAJ&hl=en" target="_blank" rel="noreferrer">among others</a>. From 2017 to 2020, I worked as a web developer.</p>
 
-          {/* {papers.map(d => <Project
-            {...d}
-          />)} */}
-
-          {/* <Title label="Digital platforms" />
-
-          {projects.map(d => <Project
-            {...d}
-          />)} */}
+          <Title label="Education" permalink="education" />
+          <ul>
+            <li>B.Sc., Universidad de Concepción (2014)</li>
+            <li>Eng., Universidad de Concepción (2016)</li>
+            <li>Ph.D., Université de Toulouse (2023)</li>
+          </ul>
+          <Title label="Publications" permalink="publications" />
+          <p>The full list of publications can be found in{" "}
+            <a href="https://scholar.google.fr/citations?user=JqTxoC0AAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>.</p>
+          
+          <Title label="Courses" permalink="courses" />
+          <ul>
+            <li>Logistics (Spring, 2023)</li>
+            <li>Data Visualization (Fall, 2024)</li>
+            <li>Information Technologies (Fall, 2024)</li>
+            <li>Innovation (Fall, 2024)</li>
+          </ul>
         </div>
       </main>
     </>
