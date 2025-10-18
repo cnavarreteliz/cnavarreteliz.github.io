@@ -1,12 +1,13 @@
 import React from "react";
-import {FaChevronRight} from "react-icons/fa";
-
 import "./Title.scss";
 
 export function Title(props) {
   const {label} = props;
-  return <h2 className="title">
-    {/* <span className="icon"><FaChevronRight /></span> */}
-    <a href={`#${props.permalink}`}><span className="label">{label}</span></a>
-  </h2>;
+  return (
+    <h2 className="title text-2xl font-bold tracking-tight text-slate-900 border-b border-slate-200/60 pb-4">
+      <a href={`#${props.permalink}`} className="hover:text-slate-700 transition-colors">
+        {label}
+      </a>
+    </h2>
+  );
 }

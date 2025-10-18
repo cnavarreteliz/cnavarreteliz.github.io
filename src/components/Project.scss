@@ -2,21 +2,29 @@
 
 .project {
   margin-bottom: 2rem;
+
   .title {
-    color: $secondary;
+    color: $secondary-color;
     margin: 0;
   }
+
   p {
     margin: 0;
   }
 
-  .article-title, .article-title a, .article-title a:visited {
-    color: $primary;
+  .article-title,
+  .article-title a,
+  .article-title a:visited {
+    color: $primary-color;
     font-weight: 600;
     font-size: 1.3rem;
   }
 
-  .title, .article-title, .authors, .description, .journal {
+  .title,
+  .article-title,
+  .authors,
+  .description,
+  .journal {
     margin-bottom: 0.2rem;
   }
 
@@ -24,7 +32,8 @@
     font-style: italic;
   }
 
-  .authors, .journal {
+  .authors,
+  .journal {
     font-size: 1rem;
   }
 

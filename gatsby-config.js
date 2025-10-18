@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.navarretelizama.com",
+    siteUrl: "https://www.carlosnavarrete.cl",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {

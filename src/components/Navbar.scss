@@ -4,7 +4,7 @@ $height: 70px;
 
 .navbar {
   height: $height;
-  background-color: $primary;
+  background-color: $primary-color;
   color: $white;
 
   .brand-wrapper {
@@ -52,7 +52,7 @@ $height: 70px;
 
         &:hover {
           color: $white;
-          background-color: $secondary;
+          background-color: $secondary-color;
         }
       }
     }

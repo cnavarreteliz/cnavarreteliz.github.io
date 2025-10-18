@@ -3,10 +3,12 @@
 .title {
   display: flex;
   align-items: center;
+
   a {
     text-decoration: none;
-    color: $secondary;
+    color: $secondary-color;
   }
+
   .icon {
     font-size: 1.25rem;
     margin-right: 0.25rem;
