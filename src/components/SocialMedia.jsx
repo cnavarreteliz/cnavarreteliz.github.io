@@ -22,21 +22,15 @@ export function SocialMedia({data = [], className = ""}) {
               rel="noopener noreferrer"
               aria-label={name}
               className="
-                inline-flex items-center gap-1.5
-                rounded-lg px-3 py-2
-                text-xs font-medium tracking-wide
-                text-slate-700
-                bg-slate-50/80
-                ring-1 ring-slate-200/80
-                hover:bg-slate-100
-                hover:text-slate-900
-                hover:ring-slate-300
-                transition-all duration-200
+                inline-flex items-center gap-1
+                text-sm font-medium text-slate-600
+                hover:text-blue-700 hover:underline
+                transition-colors duration-200
               "
             >
               {name}
               <span
-                className="text-[10px] opacity-50"
+                className="text-[10px] opacity-70"
                 aria-hidden="true"
               >
                 ↗

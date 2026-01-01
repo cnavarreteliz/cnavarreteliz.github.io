@@ -24,6 +24,48 @@ const opEdColumns = [
     year: 2025,
     columns: [
       {
+        title: "El destino de dirigir a Chile",
+        description: "Gobernar Chile con una mirada regional no consiste solo en anunciar el fin de los delegados presidenciales o en prometer más infraestructura pública en regiones.",
+        publication: "El Mostrador",
+        date: "11 de Diciembre, 2025",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2025/12/11/el-destino-de-dirigir-a-chile/"
+      },
+      {
+        title: "Inteligencia artificial, desigualdad real: el costo social de un acceso desigual a la IA",
+        description: "Si no abordamos la discusión con ambición y políticas capaces de permear más allá de nichos empresariales y académicos, la expansión de la IA corre el riesgo de ser un amplificador de desigualdades.",
+        publication: "El Mostrador",
+        date: "3 de Diciembre, 2025",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2025/12/03/inteligencia-artificial-desigualdad-real-el-costo-social-de-un-acceso-desigual-a-la-ia/"
+      },
+      {
+        title: "Elecciones: Chile es un pueblo al sur y al norte de Santiago",
+        description: "La historia es clara en esto: los movimientos extremos no emergen porque la ciudadanía se vuelva súbitamente más radical, sino porque las élites centralistas dejan de dar respuestas.",
+        publication: "El Mostrador",
+        date: "18 de Noviembre, 2025",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2025/11/18/elecciones-chile-es-un-pueblo-al-sur-y-al-norte-de-santiago/"
+      },
+      {
+        title: "La indiferencia frente a la verdad en la era digital",
+        description: "Este fenómeno no nació con la inteligencia artificial ni con las redes sociales: primero fueron las teorías conspirativas; hoy es la aceptación pasiva de información sin reflexión ni contraste.",
+        publication: "El Mostrador",
+        date: "8 de Noviembre, 2025",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2025/11/08/la-indiferencia-frente-a-la-verdad-en-la-era-digital/"
+      },
+      {
+        title: "La inteligencia artificial y la destrucción de empleos en Chile",
+        description: "Tal vez el verdadero debate de esta elección no sea cuántos empleos se crean o se destruyen hoy, sino qué tipo de trabajos podrán generarse mañana.",
+        publication: "El Mostrador",
+        date: "2 de Noviembre, 2025",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2025/11/02/la-inteligencia-artificial-y-la-destruccion-de-empleos-en-chile/"
+      },
+      {
+        title: "Regiones vs. Santiago: la segunda lectura de las presidenciales",
+        description: "Cuando conozcamos los resultados del 16 de noviembre, la conversación no será solo sobre quien gane, sino sobre dónde gana.",
+        publication: "El Mostrador",
+        date: "28 de Octubre, 2025",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2025/10/28/regiones-vs-santiago-la-segunda-lectura-de-las-presidenciales/"
+      },
+      {
         title: "Cómo ganar una elección presidencial: divide y vencerás",
         description: "Análisis sobre las estrategias de polarización y división electoral en las elecciones presidenciales contemporáneas.",
         publication: "El Mostrador",
@@ -60,64 +102,65 @@ function OpEdPage() {
   const t = translations[language];
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 relative overflow-hidden">
-      {/* Gradientes suaves de fondo - estilo IA con azules MÁS CLAROS */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-gradient-to-br from-blue-300/15 via-cyan-200/10 to-sky-300/15 blur-3xl animate-pulse" />
-        <div className="absolute top-1/3 -right-32 h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-cyan-200/12 via-blue-300/12 to-indigo-200/12 blur-3xl animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-gradient-to-br from-sky-200/12 via-blue-200/8 to-cyan-300/12 blur-3xl animate-[pulse_12s_ease-in-out_infinite]" />
-      </div>
-
+    <div className="min-h-screen bg-white text-slate-900 relative">
       <Navbar language={language} setLanguage={setLanguage} />
 
-      <main className="relative z-10 max-w-6xl mx-auto px-8 md:px-12 py-16">
+      <main className="max-w-4xl mx-auto px-6 md:px-8 py-16">
         {/* Header Section */}
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-blue-700 via-blue-900 to-black bg-clip-text text-transparent mb-4">
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">
             {t.pageTitle}
           </h1>
-          <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">
+          <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
             {t.description}
           </p>
         </div>
 
         {/* Op-Ed Columns by Year */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           {opEdColumns.map((yearData) => (
-            <section key={yearData.year} className="space-y-6">
-              <h2 className="text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3">
+            <section key={yearData.year} className="space-y-8">
+              <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-4">
                 {yearData.year}
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-8">
                 {yearData.columns.map((column, index) => (
                   <article
                     key={index}
-                    className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 ring-1 ring-black/5 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    className="group"
                   >
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors">
-                      {column.title}
-                    </h3>
+                    <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-y-2 mb-2">
+                       <a
+                        href={column.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-xl font-semibold text-slate-900 group-hover:text-blue-600 transition-colors"
+                      >
+                        {column.title}
+                      </a>
+                      <div className="text-sm text-slate-400 shrink-0">
+                        {column.date}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-sm text-slate-500 mb-3">
+                       <span className="font-medium text-slate-700">{column.publication}</span>
+                    </div>
                     
-                    <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    <p className="text-base text-slate-600 leading-relaxed max-w-3xl">
                       {column.description}
                     </p>
                     
-                    <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-                      <div className="text-xs text-slate-500">
-                        <span className="font-medium">{t.publishedIn}</span> {column.publication}
-                        <span className="mx-2">•</span>
-                        {column.date}
-                      </div>
-                      
+                    <div className="mt-4">
                       <a
                         href={column.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                        className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors"
                       >
                         {t.readMore}
-                        <span className="text-[10px]">↗</span>
+                        <span>→</span>
                       </a>
                     </div>
                   </article>

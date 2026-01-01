@@ -36,7 +36,7 @@ const publications = [
       {
         title: "Surging Scientific Capabilities in Cities Worldwide after Significant Earthquakes",
         authors: "Y Liang, C Navarrete, J Wang",
-        journal: "Available at SSRN",
+        journal: "Global Environmental Change",
         year: 2025,
         citations: 0,
         url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5211336"
@@ -117,59 +117,54 @@ function ResearchPage() {
   const t = translations[language];
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 relative overflow-hidden">
-      {/* Gradientes suaves de fondo - estilo IA con azules MÁS CLAROS */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-gradient-to-br from-blue-300/15 via-cyan-200/10 to-sky-300/15 blur-3xl animate-pulse" />
-        <div className="absolute top-1/3 -right-32 h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-cyan-200/12 via-blue-300/12 to-indigo-200/12 blur-3xl animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-gradient-to-br from-sky-200/12 via-blue-200/8 to-cyan-300/12 blur-3xl animate-[pulse_12s_ease-in-out_infinite]" />
-      </div>
-
+    <div className="min-h-screen bg-white text-slate-900 relative">
       <Navbar language={language} setLanguage={setLanguage} />
 
-      <main className="relative z-10 max-w-6xl mx-auto px-8 md:px-12 py-16">
+      <main className="max-w-4xl mx-auto px-6 md:px-8 py-16">
         {/* Header Section */}
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-blue-700 via-blue-900 to-black bg-clip-text text-transparent mb-4">
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">
             {t.pageTitle}
           </h1>
-          <p className="text-lg text-slate-700 leading-relaxed max-w-3xl">
+          <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
             {t.description}
           </p>
         </div>
 
         {/* Publications by Year */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           {publications.map((yearData) => (
-            <section key={yearData.year} className="space-y-6">
-              <h2 className="text-3xl font-bold text-slate-900 border-b border-slate-200 pb-3">
+            <section key={yearData.year} className="space-y-8">
+              <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-4">
                 {yearData.year}
               </h2>
               
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 gap-8">
                 {yearData.papers.map((paper, index) => (
                   <article
                     key={index}
-                    className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 ring-1 ring-black/5 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className="group"
                   >
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3 leading-tight">
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2 leading-tight">
                       <a
                         href={paper.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="hover:text-blue-600 transition-colors"
+                        className="hover:text-blue-700 transition-colors"
                       >
                         {paper.title}
                       </a>
                     </h3>
                     
-                    <p className="text-sm text-slate-600 mb-2">{paper.authors}</p>
+                    <p className="text-base text-slate-600 mb-3 leading-relaxed">
+                      {paper.authors}
+                    </p>
                     
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-700">
-                      <span className="font-medium italic">{paper.journal}</span>
+                    <div className="flex flex-wrap items-center gap-x-2 text-sm text-slate-500">
+                      <span className="font-medium italic text-slate-800">{paper.journal}</span>
                       {paper.volume && <span>{paper.volume}</span>}
                       {paper.pages && <span>{paper.pages}</span>}
-                      <span>({paper.year})</span>
+                      <span className="text-slate-400">({paper.year})</span>
                     </div>
                   </article>
                 ))}

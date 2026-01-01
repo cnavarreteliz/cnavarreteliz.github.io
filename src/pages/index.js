@@ -5,30 +5,29 @@ import {Title} from "../components/Title";
 import {useLanguage} from "../helpers/useLanguage";
 
 // Solo se actualiza el objeto translations (no se toca el resto del componente)
+// Solo se actualiza el objeto translations (no se toca el resto del componente)
 const translations = {
   en: {
-    greeting: "Hi, I am Carlos — data scientist, technological innovator, and researcher applying artificial intelligence to tackle big problems that help us better solve real-life issues in Chile.",
-    sendEmail: "You can write me at",
-    aboutMe: "About me",
-    bio1: "I am a data scientist, technological innovator and academic (Faculty of Engineering, Universidad de Concepción) focused on innovation, science & technology metrics, building data products and implementing artificial intelligence solutions.",
-    bio2: "I have contributed to several data visualization and analytics platforms such as Data La Tercera",
-    bio3: "My work bridges academic research and practical applications, creating AI‑enabled tools and insights that help understand complex socio‑economic systems and address challenges in Chilean society.",
-    bio4: "My research has been published in journals such as",
+    sendEmail: "Contact:",
+    bioTitle: "Bio",
+    bio1: "Professor Navarrete is a faculty member at the Faculty of Engineering, Universidad de Concepción. His research focuses on computational social science, innovation metrics, and the application of artificial intelligence to address structural problems in social and economic systems. He has examined the dynamics of political polarization, the measurement of electoral divisiveness, and the geography of scientific capabilities.",
+    bio2_start: "He has also developed advanced data products for visualizing complex data at scale, contributing to platforms such as ",
+    bio2_end: ". His work has been published in key journals including ",
+    bio3: "Professor Navarrete received a PhD in Computer Science from the Université de Toulouse in 2023, and holds an Industrial Engineering degree from Universidad de Concepción.",
     education: "Education",
     publications: "Publications",
-    publicationsText: "You can find a full, up‑to‑date list of my publications on"
+    publicationsText: "You can find a full, up‑to‑date list of his publications on"
   },
   es: {
-    greeting: "Hola, soy Carlos — científico de datos, innovador tecnológico e investigador que aplica inteligencia artificial para abordar grandes problemas que nos ayudan a resolver mejor los desafíos de la vida real en Chile.",
-    sendEmail: "Puedes escribirme a",
-    aboutMe: "Sobre mí",
-    bio1: "Soy científico de datos, innovador tecnológico y académico (Facultad de Ingeniería, Universidad de Concepción) enfocado en métricas de innovación, ciencia y tecnología, en construir productos de datos y en implementar soluciones de inteligencia artificial.",
-    bio2: "He contribuido a varias plataformas de visualización y analítica de datos como Data La Tercera",
-    bio3: "Mi trabajo conecta la investigación académica con aplicaciones prácticas, creando herramientas e ideas potenciadas por IA para entender sistemas socioeconómicos complejos y abordar desafíos en la sociedad chilena.",
-    bio4: "Mi investigación ha sido publicada en revistas como",
+    sendEmail: "Contacto:",
+    bioTitle: "Bio",
+    bio1: "El profesor Navarrete es académico de la Facultad de Ingeniería de la Universidad de Concepción. Su investigación se centra en ciencias sociales computacionales, métricas de innovación y la aplicación de inteligencia artificial para abordar problemas estructurales en sistemas sociales y económicos. Ha examinado las dinámicas de la polarización política, la medición de la división electoral y la geografía de las capacidades científicas.",
+    bio2_start: "También ha desarrollado productos de datos avanzados para visualizar datos complejos a gran escala, contribuyendo a plataformas como ",
+    bio2_end: ". Su trabajo ha sido publicado en revistas destacadas, incluyendo ",
+    bio3: "El profesor Navarrete recibió un Doctorado en Informática de la Université de Toulouse en 2023 y es Ingeniero Civil Industrial de la Universidad de Concepción.",
     education: "Educación",
     publications: "Publicaciones",
-    publicationsText: "Puedes encontrar una lista completa y actualizada de mis publicaciones en"
+    publicationsText: "Puedes encontrar una lista completa y actualizada de sus publicaciones en"
   }
 };
 
@@ -37,159 +36,132 @@ function IndexPage() {
   const t = translations[language];
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 relative overflow-hidden">
-      {/* Gradientes suaves de fondo - estilo IA con azules MÁS CLAROS */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-gradient-to-br from-blue-300/15 via-cyan-200/10 to-sky-300/15 blur-3xl animate-pulse" />
-        <div className="absolute top-1/3 -right-32 h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-cyan-200/12 via-blue-300/12 to-indigo-200/12 blur-3xl animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-gradient-to-br from-sky-200/12 via-blue-200/8 to-cyan-300/12 blur-3xl animate-[pulse_12s_ease-in-out_infinite]" />
-      </div>
-
+    <div className="min-h-screen bg-white text-slate-900 relative">
       <Navbar language={language} setLanguage={setLanguage} />
 
-      <main className="relative z-10 flex flex-col lg:flex-row max-w-7xl mx-auto px-8 md:px-12 py-16 gap-16">
-        {/* Columna lateral */}
-        <div className="lg:w-1/3 flex flex-col gap-12">
-          <div className="sticky top-28 flex flex-col gap-10">
-            <div className="relative group">
-              <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-blue-400/40 via-cyan-400/35 to-sky-400/40 opacity-50 blur-2xl group-hover:opacity-70 transition duration-500" />
-              <img
-                className="relative rounded-2xl shadow-2xl ring-1 ring-black/5 object-cover w-full aspect-[4/5]"
-                src="https://streamdata.cl/team/carlos-navarrete.webp"
-                alt="Carlos Navarrete"
-                loading="lazy"
-              />
-            </div>
+      <main className="max-w-6xl mx-auto px-6 md:px-8 py-16">
+        <div className="flex flex-col lg:flex-row gap-16">
+          
+          {/* Left Column: Profile */}
+          <div className="lg:w-1/3 flex flex-col gap-8">
+            <div className="sticky top-28">
+              <div className="mb-8">
+                 <img
+                  className="rounded-lg shadow-sm border border-slate-200 object-cover w-full max-w-[280px] aspect-[4/5] mx-auto lg:mx-0"
+                  src="https://streamdata.cl/team/carlos-navarrete.webp"
+                  alt="Carlos Navarrete"
+                  loading="lazy"
+                />
+              </div>
 
-            <div className="space-y-4 leading-relaxed">
-              <p className="text-base font-semibold bg-gradient-to-r from-blue-700 via-blue-900 to-black bg-clip-text text-transparent leading-relaxed">
-                {t.greeting}
-              </p>
-              <p className="text-sm text-slate-600">
-                {t.sendEmail}{" "}
-                <a
-                  href="mailto:cnavarretel@udec.cl"
-                  className="text-blue-600 hover:text-blue-700 font-medium underline decoration-blue-300 underline-offset-2"
-                >
-                  cnavarretel@udec.cl
-                </a>
-              </p>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 ring-1 ring-black/5 shadow-lg">
-              <SocialMedia
-                data={[
-                  {url: "https://scholar.google.com/citations?user=JqTxoC0AAAAJ&hl=en", name: "Google Scholar"},
-                  {url: "https://github.com/cnavarreteliz", name: "Github"},
-                  {url: "https://x.com/cnavarreteliz", name: "X"},
-                  {url: "https://www.linkedin.com/in/cnavarreteliz/", name: "LinkedIn"}
-                ]}
-              />
+               <div className="space-y-4">
+                <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
+                   Carlos Navarrete, Ph.D.
+                </h1>
+                <p className="text-sm text-slate-600 leading-relaxed font-medium">
+                  {t.role}
+                </p>
+                <div className="text-sm text-slate-600 pt-2">
+                  <span className="font-semibold text-slate-700">{t.sendEmail}</span>{" "}
+                  <a
+                    href="mailto:cnavarretel@udec.cl"
+                    className="text-blue-700 hover:text-blue-900 hover:underline font-medium"
+                  >
+                    cnavarretel@udec.cl
+                  </a>
+                </div>
+                 
+                 <div className="pt-4">
+                   <SocialMedia
+                    className="justify-start lg:justify-start"
+                    data={[
+                      {url: "https://scholar.google.com/citations?user=JqTxoC0AAAAJ&hl=en", name: "Google Scholar"},
+                      {url: "https://github.com/cnavarreteliz", name: "Github"},
+                      {url: "https://x.com/cnavarreteliz", name: "X"},
+                      {url: "https://www.linkedin.com/in/cnavarreteliz/", name: "LinkedIn"}
+                    ]}
+                  />
+                 </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Contenido principal - Diseño limpio sin cards */}
-        <div className="lg:w-2/3 space-y-20">
-          {/* About Section */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-slate-900 pb-4 border-b border-slate-200/60">
-              {t.aboutMe}
-            </h2>
-            <div className="space-y-6 text-slate-700 leading-relaxed text-[15px]">
-              <p>{t.bio1}</p>
-              <p>
-                {t.bio2} (
-                <a href="https://data.latercera.com" className="text-blue-600 hover:text-blue-700 font-medium underline decoration-blue-300 underline-offset-2 transition-colors">
-                  https://data.latercera.com
+          {/* Right Column: Content */}
+          <div className="lg:w-2/3 space-y-16">
+            
+            {/* Bio Section */}
+            <section>
+              <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-100 pb-2 mb-6">
+                {t.bioTitle}
+              </h2>
+              <div className="space-y-4 text-slate-700 leading-relaxed text-[16px]">
+                <p>{t.bio1}</p>
+                <p>
+                  {t.bio2_start}
+                  <a href="https://data.latercera.com" target="_blank" rel="noreferrer" className="text-blue-700 hover:underline">Data La Tercera</a>,{' '}
+                  <a href="https://datachile.io" target="_blank" rel="noreferrer" className="text-blue-700 hover:underline">DataChile</a>,{' '}
+                  <a href="https://aiworld.eu" target="_blank" rel="noreferrer" className="text-blue-700 hover:underline">the AI World</a>
+                  {language === 'en' ? ', and ' : ' y '}
+                  <a href="https://streamdata.cl" target="_blank" rel="noreferrer" className="text-blue-700 hover:underline">StreamData</a>
+                  {t.bio2_end}
+                  <i>Nature Human Behaviour</i>, <i>Research Policy</i>
+                  {language === 'en' ? ', and ' : ' y '}
+                  <i>Global Environmental Change</i>.
+                </p>
+                <p>{t.bio3}</p>
+              </div>
+            </section>
+
+            {/* Education Section */}
+            <section>
+              <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-100 pb-2 mb-6">
+                {t.education}
+              </h2>
+              <ul className="space-y-3 text-slate-700 leading-relaxed">
+                <li className="grid grid-cols-[1fr_auto] gap-4">
+                  <div>
+                    <span className="font-semibold text-slate-900">Ph.D. in Computer Science</span>
+                    <div className="text-slate-600">Université de Toulouse</div>
+                  </div>
+                  <div className="text-slate-500 text-sm">2023</div>
+                </li>
+                <li className="grid grid-cols-[1fr_auto] gap-4">
+                  <div>
+                    <span className="font-semibold text-slate-900">Industrial Engineering</span>
+                    <div className="text-slate-600">Universidad de Concepción</div>
+                  </div>
+                  <div className="text-slate-500 text-sm">2016</div>
+                </li>
+                <li className="grid grid-cols-[1fr_auto] gap-4">
+                  <div>
+                    <span className="font-semibold text-slate-900">B.Sc. in Engineering</span>
+                    <div className="text-slate-600">Universidad de Concepción</div>
+                  </div>
+                  <div className="text-slate-500 text-sm">2014</div>
+                </li>
+              </ul>
+            </section>
+
+            {/* Publications Link */}
+            <section>
+              <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-100 pb-2 mb-6">
+                {t.publications}
+              </h2>
+              <p className="text-slate-700">
+                {t.publicationsText}{" "}
+                <a
+                  href="https://scholar.google.fr/citations?user=JqTxoC0AAAAJ&hl=en"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-700 hover:underline font-medium inline-flex items-center gap-0.5"
+                >
+                  Google Scholar
+                  <span className="text-xs">↗</span>
                 </a>
-                ), DataChile (
-                <a href="https://datachile.io" className="text-blue-600 hover:text-blue-700 font-medium underline decoration-blue-300 underline-offset-2 transition-colors">
-                  https://datachile.io
-                </a>
-                ), the AI World (
-                <a href="https://aiworld.eu" className="text-blue-600 hover:text-blue-700 font-medium underline decoration-blue-300 underline-offset-2 transition-colors">
-                  https://aiworld.eu
-                </a>
-                ), and StreamData (
-                <a href="https://streamdata.cl" className="text-blue-600 hover:text-blue-700 font-medium underline decoration-blue-300 underline-offset-2 transition-colors">
-                  https://streamdata.cl
-                </a>
-                ).
               </p>
-              <p>{t.bio3}</p>
-              <p>
-                {t.bio4}{" "}
-                <a
-                  href="https://www.nature.com/articles/s41562-023-01755-x"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-700 hover:text-blue-800 font-medium underline decoration-blue-300 underline-offset-2 transition-colors"
-                >
-                  Nature Human Behaviour
-                </a>
-                ,{" "}
-                <a
-                  href="https://www.sciencedirect.com/science/article/abs/pii/S0048733320300950?via%3Dihub"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-700 hover:text-blue-800 font-medium underline decoration-blue-300 underline-offset-2 transition-colors"
-                >
-                  Research Policy
-                </a>
-                ,{" "}
-                <a
-                  href="https://scholar.google.com/citations?user=JqTxoC0AAAAJ&hl=en"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-700 hover:text-blue-800 font-medium underline decoration-blue-300 underline-offset-2 transition-colors"
-                >
-                  entre otras
-                </a>
-                .
-              </p>
-            </div>
-          </section>
+            </section>
 
-          {/* Education Section */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-slate-900 pb-4 border-b border-slate-200/60">
-              {t.education}
-            </h2>
-            <ul className="space-y-4 text-slate-700 leading-relaxed text-[15px]">
-              <li className="flex items-start gap-3">
-                <span className="text-blue-600 mt-1.5 text-xs">●</span>
-                <span><span className="font-semibold">Doctorate</span>, Université de Toulouse (2023)</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-600 mt-1.5 text-xs">●</span>
-                <span><span className="font-semibold">Engineering</span>, Universidad de Concepción (2016)</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-600 mt-1.5 text-xs">●</span>
-                <span><span className="font-semibold">B.Sc.</span>, Universidad de Concepción (2014)</span>
-              </li>
-            </ul>
-          </section>
-
-          {/* Publications Section */}
-          <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-slate-900 pb-4 border-b border-slate-200/60">
-              {t.publications}
-            </h2>
-            <p className="text-slate-700 leading-relaxed text-[15px]">
-              {t.publicationsText}{" "}
-              <a
-                href="https://scholar.google.fr/citations?user=JqTxoC0AAAAJ&hl=en"
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-600 hover:text-blue-700 font-medium underline decoration-blue-300 underline-offset-2 transition-colors inline-flex items-center gap-1"
-              >
-                Google Scholar
-                <span className="text-xs">↗</span>
-              </a>
-            </p>
-          </section>
+          </div>
         </div>
       </main>
     </div>

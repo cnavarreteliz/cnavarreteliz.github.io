@@ -16,38 +16,57 @@ export default function Navbar({language, setLanguage}) {
   return (
     <>
       <title>Carlos Navarrete, Ph.D.</title>
-      <nav className={`fixed top-0 inset-x-0 z-50 border-b transition-all duration-300 ${
-        isScrolled 
-          ? "border-neutral-200/40 bg-white/90 backdrop-blur-xl shadow-sm" 
-          : "border-transparent bg-transparent"
-      }`}>
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 h-20 flex items-center relative">
-          {/* Left menu - Desktop */}
+      <nav className="fixed top-0 inset-x-0 z-50 border-b border-slate-100 bg-white">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 h-20 flex items-center justify-between">
+          
+          {/* Brand - Left aligned */}
+          <a href="/" className="flex items-center group">
+            <span className="text-xl font-semibold tracking-tight text-slate-900">
+              CARLOS NAVARRETE
+            </span>
+          </a>
+
+          {/* Desktop Menu - Right Aligned */}
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="/"
-              className="text-[13px] font-medium tracking-wide text-neutral-600 hover:text-neutral-900 transition-colors"
-            >
+            <a href="/" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
               ABOUT
             </a>
-            <a
-              href="/research"
-              className="text-[13px] font-medium tracking-wide text-neutral-600 hover:text-neutral-900 transition-colors"
-            >
+            <a href="/research" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
               RESEARCH
             </a>
-            <a
-              href="/op-ed"
-              className="text-[13px] font-medium tracking-wide text-neutral-600 hover:text-neutral-900 transition-colors"
-            >
+            <a href="/op-ed" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
               OP-ED
             </a>
+             <a href="/courses" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+              TEACHING
+            </a>
+             {/* Language Selector */}
+            {language !== undefined && setLanguage && (
+              <div className="flex items-center gap-2 ml-4 border-l border-slate-200 pl-4">
+                <button
+                  onClick={() => setLanguage("en")}
+                  className={`text-xs font-semibold transition-colors ${
+                    language === "en" ? "text-slate-900" : "text-slate-400 hover:text-slate-600"
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => setLanguage("es")}
+                  className={`text-xs font-semibold transition-colors ${
+                    language === "es" ? "text-slate-900" : "text-slate-400 hover:text-slate-600"
+                  }`}
+                >
+                  ES
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-neutral-600 hover:text-neutral-900 transition-colors"
+            className="md:hidden text-slate-600 hover:text-slate-900"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,76 +77,18 @@ export default function Navbar({language, setLanguage}) {
               )}
             </svg>
           </button>
-
-          {/* Brand centered */}
-          <a
-            href="/"
-            className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center group select-none"
-          >
-            <span className="text-xl md:text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-blue-800 to-black bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
-              CARLOS NAVARRETE
-            </span>
-          </a>
-
-          {/* Right side - Language selector */}
-          <div className="ml-auto flex justify-end">
-            {language !== undefined && setLanguage && (
-              <div className="flex bg-white/90 backdrop-blur rounded-full p-1 ring-1 ring-black/5 shadow-sm">
-                <button
-                  onClick={() => setLanguage("en")}
-                  className={`px-3 py-1.5 rounded-full transition-all duration-200 text-[11px] font-semibold tracking-wide ${
-                    language === "en"
-                      ? "bg-gradient-to-r from-blue-600 to-blue-900 text-white shadow-sm"
-                      : "text-slate-500 hover:text-slate-900"
-                  }`}
-                >
-                  EN
-                </button>
-                <button
-                  onClick={() => setLanguage("es")}
-                  className={`px-3 py-1.5 rounded-full transition-all duration-200 text-[11px] font-semibold tracking-wide ${
-                    language === "es"
-                      ? "bg-gradient-to-r from-blue-600 to-blue-900 text-white shadow-sm"
-                      : "text-slate-500 hover:text-slate-900"
-                  }`}
-                >
-                  ES
-                </button>
-              </div>
-            )}
-          </div>
         </div>
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-neutral-200/40 bg-white/95 backdrop-blur-xl">
-            <div className="px-6 py-4 space-y-3">
-              <a
-                href="/"
-                className="block text-sm font-medium tracking-wide text-neutral-600 hover:text-neutral-900 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                ABOUT
-              </a>
-              <a
-                href="/research"
-                className="block text-sm font-medium tracking-wide text-neutral-600 hover:text-neutral-900 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                RESEARCH
-              </a>
-              <a
-                href="/op-ed"
-                className="block text-sm font-medium tracking-wide text-neutral-600 hover:text-neutral-900 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                OP-ED
-              </a>
-            </div>
+          <div className="md:hidden border-t border-slate-100 bg-white px-6 py-4 space-y-4">
+            <a href="/" className="block text-sm font-medium text-slate-600 hover:text-slate-900">ABOUT</a>
+            <a href="/research" className="block text-sm font-medium text-slate-600 hover:text-slate-900">RESEARCH</a>
+            <a href="/op-ed" className="block text-sm font-medium text-slate-600 hover:text-slate-900">OP-ED</a>
+            <a href="/courses" className="block text-sm font-medium text-slate-600 hover:text-slate-900">TEACHING</a>
           </div>
         )}
       </nav>
-      {/* Offset para que el contenido no quede debajo del navbar */}
       <div className="h-20" />
     </>
   );

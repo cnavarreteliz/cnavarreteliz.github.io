@@ -1,16 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
 
-$primary-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-$title-font: 'Inter', sans-serif;
-
-$bg-color: #fafafa;
-$text-color: #1a1a1a;
-$primary-color: #0d6efd;
-$secondary-color: #6c757d;
-$border-color: #e5e5e5;
-$white: #fff;
-$max-width: 1600px;
+@import "variables";
 
 body {
   font-family: $primary-font;
