@@ -21,6 +21,32 @@ const translations = {
 // Columnas de opinión organizadas por año
 const opEdColumns = [
   {
+    year: 2026,
+    columns: [
+      {
+        title: "El laberinto de la movilidad social y el rol de las universidades regionales",
+        description: "El lugar de origen de un estudiante dicta el destino: mientras los estudiantes con mejores condiciones preexistentes cuentan con todas las ventajas estructurales, otros deben compensar con un desempeño excepcional las carencias de un sistema escolar desigual.",
+        publication: "El Mostrador",
+        date: "28 de Enero, 2026",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2026/01/28/el-laberinto-de-la-movilidad-social-y-el-rol-de-las-universidades-regionales/"
+      },
+      {
+        title: "La silenciosa erosión de la educación pública",
+        description: "Cifras más o cifras menos, siempre podemos contarnos la historia que deseemos. En medio de la disputa ideológica, los datos se utilizan con frecuencia para confirmar visiones de mundo preexistentes, más que para enfrentar los problemas estructurales que revelan.",
+        publication: "El Mostrador",
+        date: "13 de Enero, 2026",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2026/01/13/la-silenciosa-erosion-de-la-educacion-publica/"
+      },
+      {
+        title: "Yo, humano",
+        description: "Si no actuamos ahora para anticipar y distribuir de manera equitativa sus costos y beneficios, la IA puede convertirse en un potente catalizador de descontento social. En ese vacío prosperarán discursos populistas anti-IA, que encontrarán en esta tecnología un enemigo ideal.",
+        publication: "El Mostrador",
+        date: "2 de Enero, 2026",
+        url: "https://www.elmostrador.cl/noticias/opinion/columnas/2026/01/02/yo-humano/"
+      }
+    ]
+  },
+  {
     year: 2025,
     columns: [
       {
